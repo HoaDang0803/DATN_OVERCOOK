@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj": {}
+  },
+  "projects": {
+    "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj",
+        "projectName": "CodeMonkeyFree",
+        "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj",
+        "packagesPath": "/Users/hoadang/.nuget/packages/",
+        "outputPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Temp/obj/CodeMonkeyFree/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hoadang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj",
+        "projectName": "CodeMonkeyFreeEditor",
+        "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj",
+        "packagesPath": "/Users/hoadang/.nuget/packages/",
+        "outputPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Temp/obj/CodeMonkeyFreeEditor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hoadang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj": {
+                "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
