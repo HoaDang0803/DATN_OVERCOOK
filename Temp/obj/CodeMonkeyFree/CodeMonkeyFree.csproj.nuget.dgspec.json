@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj": {}
+    "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj": {}
   },
   "projects": {
-    "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj": {
+    "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj",
+        "projectUniqueName": "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj",
         "projectName": "CodeMonkeyFree",
-        "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj",
-        "packagesPath": "/Users/hoadang/.nuget/packages/",
-        "outputPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Temp/obj/CodeMonkeyFree/",
+        "projectPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj",
+        "packagesPath": "C:\\Users\\dangh\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\Temp\\obj\\CodeMonkeyFree\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hoadang/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dangh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netstandard2.1": {
@@ -54,7 +54,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107\\RuntimeIdentifierGraph.json"
         }
       }
     }

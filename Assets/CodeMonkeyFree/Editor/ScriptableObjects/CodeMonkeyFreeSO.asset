@@ -14,39 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1748418259
+  lastShownTimestamp: 1749910830
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1748418259
+  checkedLastUpdateTimestamp: 1749910831
   lastQOTDResponse:
-    questionId: 185
-    questionText: What is the purpose of Unity Hub?
-    answerA: Provide a space for the community to interact
-    answerB: Manage different Unity versions and Projects
-    answerC: Dashboard for Unity services
+    questionId: 190
+    questionText: 'What is the value stored in percentage?
+
+      <p>int health =
+      25;</p>
+
+      <p>int healthMax = 100;</p>
+
+      <p>float percentage = health
+      / healthMax;</p>'
+    answerA: 0.25f
+    answerB: 0
+    answerC: 2.5f
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1748418259
+  lastQotdTimestamp: 1749910831
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleMay252DGameAssets.png
-    topText: HUGE bundle with literally 10,000+ 2D elements! 97% OFF! (ENDS SOON)
-    topLink: humblebundle
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/ultimateOverview70_6FreeUpdate.png
+    topText: Learn how to use 70 Tools and Features! (Unity 6 Updated)
+    topLink: ultimateunityoverview
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1748418259
+  lastDynamicHeaderTimestamp: 1749910831
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1748418259
+  websiteLatestMessageTimestamp: 1749910831
   websiteLatestVideos:
     videos:
-    - youTubeId: 29ejb-nzO1A
-      title: Is Schedule I a LOW EFFORT Game?
-    - youTubeId: YCj1VXyxtwI
-      title: Was I WRONG? Do Gamers really NOT care about AI?
-    - youTubeId: 9WRioxheeSU
-      title: I can't believe it's been ONE YEAR! (actually 4 birthdays)
-    - youTubeId: 2qb92qCCKTA
-      title: TOP 10 NEW Systems and Tools MAY 2025! | Unity Asset Store
-  websiteLatestVideosTimestamp: 1748418259
+    - youTubeId: 2UP_g58SDKM
+      title: TOP 10 FREE NEW Assets JUNE 2025!
+    - youTubeId: jPXFBmfInRQ
+      title: YOU can CHANGE the FUTURE of Unity!
+    - youTubeId: IPwIpYP3dvg
+      title: 70 Unity Tools and Features in 16 MINUTES!
+    - youTubeId: U5Wolv65yK8
+      title: Dev followed my FREE course, then made $150,000!
+  websiteLatestVideosTimestamp: 1749910831

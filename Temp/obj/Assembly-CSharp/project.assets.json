@@ -46,19 +46,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/hoadang/.nuget/packages/": {}
+    "C:\\Users\\dangh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Assembly-CSharp.csproj",
+      "projectUniqueName": "D:\\Study\\HAU\\DATN\\OVERCOOK\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Assembly-CSharp.csproj",
-      "packagesPath": "/Users/hoadang/.nuget/packages/",
-      "outputPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/Temp/obj/Assembly-CSharp/",
+      "projectPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\Assembly-CSharp.csproj",
+      "packagesPath": "C:\\Users\\dangh\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\Temp\\obj\\Assembly-CSharp\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/hoadang/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dangh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -70,11 +70,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj": {
-              "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFree.csproj"
+            "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj": {
+              "projectPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFree.csproj"
             },
-            "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj": {
-              "projectPath": "/Users/hoadang/Documents/Developer/Unity/OVERCOOK/CodeMonkeyFreeEditor.csproj"
+            "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFreeEditor.csproj": {
+              "projectPath": "D:\\Study\\HAU\\DATN\\OVERCOOK\\CodeMonkeyFreeEditor.csproj"
             }
           }
         }
@@ -89,7 +89,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "netstandard2.1": {
@@ -105,7 +105,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107\\RuntimeIdentifierGraph.json"
       }
     }
   }
