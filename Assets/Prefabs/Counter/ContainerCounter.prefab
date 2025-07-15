@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6680017390263236208, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 416289976
+      objectReference: {fileID: 0}
     - target: {fileID: 7659003737658404574, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
       propertyPath: m_Name
       value: ContainerCounter
@@ -90,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1d00f9a6cd3a46abeada7244ff4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   counterTopPoint: {fileID: 3988654735708286004}
   kitchenObjectSO: {fileID: 11400000, guid: bd19d844256074e4a9adc39d3f6e883c, type: 2}
 --- !u!4 &9117377413649990449 stripped

@@ -1,9 +1,19 @@
 using UnityEngine;
 using System;
+using Unity.Netcode;
+using Unity.VisualScripting;
 
-public class Player : MonoBehaviour, IKitchenbjectParent
+public class Player : NetworkBehaviour, IKitchenObjectParent
 {
-    public static Player Instance { get; private set; }
+    public static event EventHandler OnAnyPlayerSpawned;
+    public static event EventHandler OnAnyPickedSomething;
+
+    public static void ResetStaticData()
+    {
+        OnAnyPlayerSpawned = null;
+    }
+
+    public static Player LocalInstance { get; private set; }
 
     public event EventHandler OnPickedSomething;
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
@@ -13,7 +23,6 @@ public class Player : MonoBehaviour, IKitchenbjectParent
     }
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotationSpeed = 10f;
-    [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask countersLayerMask;
     [SerializeField] private Transform kitchenObjectHoldPoint;
 
@@ -25,18 +34,22 @@ public class Player : MonoBehaviour, IKitchenbjectParent
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Debug.LogError("There is more than one Player instance in the scene!");
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+        // Instance = this;
     }
+
     private void Start()
     {
-        gameInput.OnInteractAction += gameInput_OnInteractAction;
-        gameInput.OnInteractAlternateAction += gameInput_OnInteractAlternateAction;
+        GameInput.Instance.OnInteractAction += gameInput_OnInteractAction;
+        GameInput.Instance.OnInteractAlternateAction += gameInput_OnInteractAlternateAction;
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        if (IsOwner)
+        {
+            LocalInstance = this;
+        }
+        OnAnyPlayerSpawned?.Invoke(this, EventArgs.Empty);
     }
 
     private void gameInput_OnInteractAlternateAction(object sender, System.EventArgs e)
@@ -61,6 +74,8 @@ public class Player : MonoBehaviour, IKitchenbjectParent
 
     private void Update()
     {
+        if (!IsOwner) return;
+
         if (!KitchenGameManager.Instance.IsGamePlaying()) return;
 
         HandleMovement();
@@ -74,7 +89,7 @@ public class Player : MonoBehaviour, IKitchenbjectParent
 
     private void HandleInteractions()
     {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
         Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 
 
@@ -104,9 +119,55 @@ public class Player : MonoBehaviour, IKitchenbjectParent
         }
     }
 
+    private void HandleMovementServerAuth()
+    {
+        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
+        HandleMovementServerRpc(inputVector);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void HandleMovementServerRpc(Vector2 inputVector)
+    {
+        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+        float moveDistance = moveSpeed * Time.deltaTime;
+        float playerRadius = .7f;
+        float playerHeight = 2f;
+        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
+
+        if (!canMove)
+        {
+            Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
+            canMove = (moveDir.x < -.5f || moveDir.x > +.5f) && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+            if (canMove)
+            {
+                moveDir = moveDirX;
+            }
+            else
+            {
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
+                canMove = (moveDir.z < -.5f || moveDir.z > +.5f) && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
+                if (canMove)
+                {
+                    moveDir = moveDirZ;
+                }
+                else
+                {
+
+                }
+            }
+        }
+        if (canMove)
+        {
+            transform.position += moveDir * moveDistance;
+        }
+
+        isWalking = moveDir != Vector3.zero;
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotationSpeed);
+    }
+
     private void HandleMovement()
     {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
         float moveDistance = moveSpeed * Time.deltaTime;
@@ -163,6 +224,7 @@ public class Player : MonoBehaviour, IKitchenbjectParent
         if (kitchenObject != null)
         {
             OnPickedSomething?.Invoke(this, EventArgs.Empty);
+            OnAnyPickedSomething?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -179,6 +241,11 @@ public class Player : MonoBehaviour, IKitchenbjectParent
     public bool HasKitchenObject()
     {
         return kitchenObject != null;
+    }
+
+    public NetworkObject GetNetworkObject()
+    {
+        return NetworkObject;
     }
 
 }

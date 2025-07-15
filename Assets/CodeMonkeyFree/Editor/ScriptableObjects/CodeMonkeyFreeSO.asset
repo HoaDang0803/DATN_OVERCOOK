@@ -14,44 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1751642331
+  lastShownTimestamp: 1752584784
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1751642331
+  checkedLastUpdateTimestamp: 1752584785
   lastQOTDResponse:
-    questionId: 197
-    questionText: What is the difference between Action&lt;float&gt; and Func&lt;float&gt;
-      ?
-    answerA: Both are the same
-    answerB: Action&#60;float&#62; takes float parameter and Func&#60;float&#62;
-      returns float
-    answerC: Func&#60;float&#62; takes float parameter and Action&#60;float&#62;
-      returns float
+    questionId: 201
+    questionText: When you create a new script, do you always have to extend MonoBehaviour?
+    answerA: Yes
+    answerB: No
+    answerC: Only if you want to use it as a Game Object Component
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1751642331
+  lastQotdTimestamp: 1752584785
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/cSharpCourseNewBeginnerProjects.png
-    topText: I just updated my C# course with 10 FUN Beginner Projects! Learn by
-      DOING!
-    topLink: csharpcourse
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle.png
+    topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ONLY THIS SUMMER!
+    topLink: summer2025bundle
     bottomText: AWESOME NEW Unity Bundle with Tools and Assets 97% OFF!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1751642331
+  lastDynamicHeaderTimestamp: 1752584785
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1751642331
+  websiteLatestMessageTimestamp: 1752584785
   websiteLatestVideos:
     videos:
-    - youTubeId: Lj_CgExP3AA
-      title: You Game ANCHOR is super important! Do you know it?
-    - youTubeId: K0di3MEm70U
-      title: Learn C# Making Beginner Projects! (FizzBuzz, Hangman - SOON!)
-    - youTubeId: 6WUJ3z9EGnI
-      title: TOP 20 Visual Assets to INSPIRE YOU! (JUNE 2025)
-    - youTubeId: du6S-egCx1s
-      title: Getting Started with Unity AI (Assistant, Generators, Developer Data
-        Framework)
-  websiteLatestVideosTimestamp: 1751642331
+    - youTubeId: 4kg2N-t2tWI
+      title: How REAL Developers Build Complex Games!
+    - youTubeId: OOVrtfWLdvE
+      title: TOP 10 FREE NEW Assets JULY 2025!
+    - youTubeId: ALogEuL6QdA
+      title: The BEST Design Patterns for Game Dev! (Save Time and make BETTER Games!)
+    - youTubeId: 7RwMD97Le7I
+      title: Learn C# by DOING, FizzBuzz Beginner Project (Overview + Walkthrough)
+  websiteLatestVideosTimestamp: 1752584785
