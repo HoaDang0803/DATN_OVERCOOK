@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1752584784
+  lastShownTimestamp: 1752758250
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1752584785
+  checkedLastUpdateTimestamp: 1752758251
   lastQOTDResponse:
     questionId: 201
     questionText: When you create a new script, do you always have to extend MonoBehaviour?
@@ -27,26 +27,26 @@ MonoBehaviour:
     answerC: Only if you want to use it as a Game Object Component
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1752584785
+  lastQotdTimestamp: 1752758251
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ONLY THIS SUMMER!
     topLink: summer2025bundle
     bottomText: AWESOME NEW Unity Bundle with Tools and Assets 97% OFF!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1752584785
+  lastDynamicHeaderTimestamp: 1752758251
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1752584785
+  websiteLatestMessageTimestamp: 1752758251
   websiteLatestVideos:
     videos:
+    - youTubeId: PbFb7PFdT4A
+      title: Get 98% OFF on the Unity Summer Sale! (Awesome TOOLS and Assets!)
     - youTubeId: 4kg2N-t2tWI
       title: How REAL Developers Build Complex Games!
     - youTubeId: OOVrtfWLdvE
       title: TOP 10 FREE NEW Assets JULY 2025!
     - youTubeId: ALogEuL6QdA
       title: The BEST Design Patterns for Game Dev! (Save Time and make BETTER Games!)
-    - youTubeId: 7RwMD97Le7I
-      title: Learn C# by DOING, FizzBuzz Beginner Project (Overview + Walkthrough)
-  websiteLatestVideosTimestamp: 1752584785
+  websiteLatestVideosTimestamp: 1752758251
