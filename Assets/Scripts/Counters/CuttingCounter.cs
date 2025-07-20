@@ -52,6 +52,8 @@ public class CuttingCounter : BaseCounter, IHasProgress
             else
             {
                 GetKitchenObject().SetKitchenObjectParent(player);
+
+                InteractLogicPlateObjectOnCounterServerRpc();
             }
         }
     }

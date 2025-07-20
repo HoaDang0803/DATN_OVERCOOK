@@ -11,7 +11,9 @@ public class DeliveryManager : NetworkBehaviour
     public event EventHandler OnRecipeFailed;
 
     public static DeliveryManager Instance { get; private set; }
+
     [SerializeField] private RecipeListSO recipeListSO;
+
     private List<RecipeSO> waitingRecipeSOList;
 
     private float spawnRecipeTimer = 4f;
@@ -24,6 +26,14 @@ public class DeliveryManager : NetworkBehaviour
         Instance = this;
 
         waitingRecipeSOList = new List<RecipeSO>();
+
+        // NetworkManager.Singleton.OnServerStarted += () =>
+        // {
+        //     if (IsServer)
+        //     {
+        //         spawnRecipeTimer = spawnRecipeTimerMax;
+        //     }
+        // };
     }
 
     private void Update()

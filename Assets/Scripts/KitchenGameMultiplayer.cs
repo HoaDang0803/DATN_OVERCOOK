@@ -1,18 +1,61 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KitchenGameMultiplayer : NetworkBehaviour
 {
+    private const int MAX_PLAYERS_AMOUNT = 4;
     public static KitchenGameMultiplayer Instance { get; private set; }
+
+    public event EventHandler OnTryingTojoinGame;
+    public event EventHandler OnFailToJoinGame;
 
     [SerializeField] private KitchenObjectListSO kitchenObjectListSO;
 
     private void Awake()
     {
-        if (Instance == null)
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void StartHost()
+    {
+        NetworkManager.Singleton.ConnectionApprovalCallback += NetworkManager_ConnectionApprovalCallback;
+        NetworkManager.Singleton.StartHost();
+    }
+
+    private void NetworkManager_ConnectionApprovalCallback(NetworkManager.ConnectionApprovalRequest connectionApprovalRequest, NetworkManager.ConnectionApprovalResponse connectionApprovalResponse)
+    {
+        if (SceneManager.GetActiveScene().name != Loader.Scene.CharacterSelectScene.ToString())
         {
-            Instance = this;
+            connectionApprovalResponse.Approved = false;
+            connectionApprovalResponse.Reason = "Game has already started.";
+            return;
         }
+
+        if (NetworkManager.Singleton.ConnectedClientsIds.Count >= MAX_PLAYERS_AMOUNT)
+        {
+            connectionApprovalResponse.Approved = false;
+            connectionApprovalResponse.Reason = "Game is full.";
+            return;
+        }
+
+        connectionApprovalResponse.Approved = true;
+    }
+
+    public void StartClient()
+    {
+        OnTryingTojoinGame?.Invoke(this, EventArgs.Empty);
+
+        NetworkManager.Singleton.OnClientDisconnectCallback += NetworkManager_OnClientDisconnectedCallback;
+        NetworkManager.Singleton.StartClient();
+    }
+
+    private void NetworkManager_OnClientDisconnectedCallback(ulong clientId)
+    {
+        OnFailToJoinGame?.Invoke(this, EventArgs.Empty);
     }
 
     public void SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)

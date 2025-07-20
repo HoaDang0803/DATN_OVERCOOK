@@ -91,6 +91,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6680017390263236208, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3768942263
+      objectReference: {fileID: 0}
     - target: {fileID: 7659003737658404574, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
       propertyPath: m_Name
       value: CuttingCounter
@@ -152,6 +156,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7659003737658404574, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8750100033436417829}
+    - targetCorrespondingSourceObject: {fileID: 7659003737658404574, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 468387007227876037}
   m_SourcePrefab: {fileID: 100100000, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
 --- !u!1 &2759212947931671730 stripped
@@ -159,6 +166,31 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7659003737658404574, guid: e263e274eaf6c744b994915c20e0141c, type: 3}
   m_PrefabInstance: {fileID: 5476534236815327852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8750100033436417829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759212947931671730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 0
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!114 &468387007227876037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88172e4591b2a9409e975f2abb53fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   counterTopPoint: {fileID: 8320001334123703999}
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: e34824e4f36630a4b8e7facb6cca178b, type: 2}

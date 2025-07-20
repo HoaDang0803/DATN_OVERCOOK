@@ -14,39 +14,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1752758250
+  lastShownTimestamp: 1753005295
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1752758251
+  checkedLastUpdateTimestamp: 1753005295
   lastQOTDResponse:
-    questionId: 201
-    questionText: When you create a new script, do you always have to extend MonoBehaviour?
-    answerA: Yes
-    answerB: No
-    answerC: Only if you want to use it as a Game Object Component
+    questionId: 202
+    questionText: 'What is the Color on the SpriteRenderer after running this code?
+
+      <p>Color
+      myColor = Color.red;</p>
+
+      <p>spriteRenderer.color = myColor;</p>
+
+      <p>myColor
+      = Color.blue;</p>'
+    answerA: Red
+    answerB: Blue
+    answerC: Don't Know
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1752758251
+  lastQotdTimestamp: 1753005295
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ONLY THIS SUMMER!
     topLink: summer2025bundle
-    bottomText: AWESOME NEW Unity Bundle with Tools and Assets 97% OFF!
-    bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1752758251
+    bottomText: Get my Code Monkey Toolkit and make games BETTER and FASTER! 50%
+      OFF right now!
+    bottomLink: toolkit
+  lastDynamicHeaderTimestamp: 1753005295
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1752758251
+  websiteLatestMessageTimestamp: 1753005295
   websiteLatestVideos:
     videos:
+    - youTubeId: s9ORB4W5K2E
+      title: How to make an AWESOME Fantasy RPG in 19 MINUTES!
     - youTubeId: PbFb7PFdT4A
       title: Get 98% OFF on the Unity Summer Sale! (Awesome TOOLS and Assets!)
     - youTubeId: 4kg2N-t2tWI
       title: How REAL Developers Build Complex Games!
     - youTubeId: OOVrtfWLdvE
       title: TOP 10 FREE NEW Assets JULY 2025!
-    - youTubeId: ALogEuL6QdA
-      title: The BEST Design Patterns for Game Dev! (Save Time and make BETTER Games!)
-  websiteLatestVideosTimestamp: 1752758251
+  websiteLatestVideosTimestamp: 1753005295
