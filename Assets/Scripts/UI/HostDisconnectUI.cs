@@ -15,7 +15,7 @@ public class HostDisconnectUI : MonoBehaviour
             Loader.Load(Loader.Scene.MainMenuScene);
         });
     }
-    
+
     private void Start()
     {
         NetworkManager.Singleton.OnConnectionEvent += NetworkManager_OnConnectionEvent;
@@ -38,4 +38,13 @@ public class HostDisconnectUI : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    private void OnDestroy()
+    {
+        if (NetworkManager.Singleton != null)
+        {
+            NetworkManager.Singleton.OnConnectionEvent -= NetworkManager_OnConnectionEvent;
+        }
+    }
+
 }

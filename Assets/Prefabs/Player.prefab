@@ -82,10 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1610490366
+  GlobalObjectIdHash: 4077020104
   InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -93,8 +91,6 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
 --- !u!114 &5517161103028453122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37590ca28b629440aa6ec6c2cc28bd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   moveSpeed: 5
   rotationSpeed: 10
   countersLayerMask:
@@ -122,6 +117,7 @@ MonoBehaviour:
   - {x: 2, y: 0, z: 0}
   - {x: -2, y: 0, z: -2}
   - {x: 2, y: 0, z: -2}
+  playerVisual: {fileID: 7481285262084196848}
 --- !u!114 &7156777621159396172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,20 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f19791abaee29e418bb3bcc67d80561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  NetworkTransformExpanded: 1
-  AutoOwnerAuthorityTickOffset: 1
-  PositionInterpolationType: 0
-  RotationInterpolationType: 0
-  ScaleInterpolationType: 0
-  PositionLerpSmoothing: 1
-  PositionMaxInterpolationTime: 0.1
-  RotationLerpSmoothing: 1
-  RotationMaxInterpolationTime: 0.1
-  ScaleLerpSmoothing: 1
-  ScaleMaxInterpolationTime: 0.1
-  AuthorityMode: 0
-  TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
   SyncPositionY: 0
@@ -177,7 +159,6 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
 --- !u!65 &7345756229266431103
@@ -377,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db6272611b8b46a1b95b3f381a11263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   player: {fileID: 5517161103028453122}
 --- !u!114 &5656184486099820857
 MonoBehaviour:
@@ -391,6 +371,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0f7f5ebf1712e4ea88adc857251e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 2646045244698884565}
+--- !u!114 &7481285262084196848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 10918787604894121, guid: 1c5dda3c7cd3cf742afcade5419faeab, type: 3}
+  m_PrefabInstance: {fileID: 7490638308338669657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354009160140502142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d3bf91e6ec47044a2e600b4abecfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
